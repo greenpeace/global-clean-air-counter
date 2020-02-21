@@ -78,22 +78,16 @@ export default {
     methods: {
         totalDeaths: function(cityData) {
             // Get all data resulting in deaths
-            var pm25Deaths = cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Deaths')
+            var pm25Deaths = (cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Deaths')).filter(y => y.Cause.indexOf('LRI') >= 0)
             var no2Deaths = cityData.estimations.ytd['NO2'].filter(x => x.Outcome === 'Deaths')
             var o3Deaths = cityData.estimations.ytd['O3_8h'].filter(x => x.Outcome === 'Deaths')
             var totalDeaths = 0
 
-            //this.no2 = false
-            //this.o3 = false
-            //why does this create an infinite loop?
-
             if (no2Deaths[0].number_central) {
-                //console.log('no2 true')
                 this.no2 = true
             }
 
             if (o3Deaths[0].number_central) {
-                //console.log('o3 true')
                 this.o3 = true
             }
 
