@@ -1,7 +1,11 @@
 {
   "lead_text": "How much is air pollution costing your city?",
   "select_your_city": "Please select your city",
-  "deaths": "In {city} PM2.5 air pollution has cost an estimated {costLine} since {showDate}.",
+  "pm25deaths":    "In {city} air pollution from PM2.5 has cost an estimated {costLine} since {showDate}.",
+  "pm25no2deaths": "In {city} air pollution from PM2.5 and NO2 has cost an estimated {costLine} since {showDate}.",
+  "pm25o3deaths": "In {city} air pollution from PM2.5 and ozone has cost an estimated {costLine} since {showDate}.",
+  "pm25no2o3deaths": "In {city} air pollution from PM2.5, NO2 and ozone has cost an estimated {costLine} since {showDate}.",
+  "methodology": "Estimate uses daily recorded PM2.5 levels since 1 January 2020 to apportion the expected total annual impact attributable to PM2.5 from the preceding 365 days. Methodology here.",
   "life_cost": "lives",
   "and": "and",
   "hashtag": "CleanAirNow",

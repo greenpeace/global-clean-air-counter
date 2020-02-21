@@ -1,6 +1,6 @@
 <template>
     <div v-if="this.$parent.cityData">
-        <i18n path="deaths" tag="h2" id="costtext">
+        <i18n path="pm25no2deaths" tag="h2" id="costtext" v-if="no2">
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
@@ -13,6 +13,46 @@
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
             </template>
         </i18n>
+        <i18n path="pm25o3deaths" tag="h2" id="costtext" v-else-if="o3">
+            <template #city>
+                <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
+            </template>
+            <template #costLine><br />
+                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }} {{ $t('life_cost')}}</span>
+                <span class="bg-transparent"> {{ $t('and') }} </span>
+                <span class="bg-warning font-weight-bold">US${{ totalCosts(cityData).toLocaleString() }}</span><br />
+            </template>
+            <template #showDate>
+                <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
+            </template>
+        </i18n>
+        <i18n path="pm25no2o3deaths" tag="h2" id="costtext" v-else-if="no2 && o3">
+            <template #city>
+                <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
+            </template>
+            <template #costLine><br />
+                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }} {{ $t('life_cost')}}</span>
+                <span class="bg-transparent"> {{ $t('and') }} </span>
+                <span class="bg-warning font-weight-bold">US${{ totalCosts(cityData).toLocaleString() }}</span><br />
+            </template>
+            <template #showDate>
+                <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
+            </template>
+        </i18n>
+        <i18n path="pm25deaths" tag="h2" id="costtext" v-else>
+            <template #city>
+                <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
+            </template>
+            <template #costLine><br />
+                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }} {{ $t('life_cost')}}</span>
+                <span class="bg-transparent"> {{ $t('and') }} </span>
+                <span class="bg-warning font-weight-bold">US${{ totalCosts(cityData).toLocaleString() }}</span><br />
+            </template>
+            <template #showDate>
+                <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
+            </template>
+        </i18n>
+        <span>{{ $t('methodology') }}</span>
         <hr />
         <div>
             <strong>{{ $t('share') }}</strong><br />
@@ -23,11 +63,16 @@
 </template>
 
 <script>
+/* eslint-disable */
+var no2
+var o3
 export default {
     name: 'ShowData',
     props: ['cityData'],
     data: function() {
         return {
+            no2: false,
+            o3: false
         }
     },
     methods: {
@@ -37,6 +82,20 @@ export default {
             var no2Deaths = cityData.estimations.ytd['NO2'].filter(x => x.Outcome === 'Deaths')
             var o3Deaths = cityData.estimations.ytd['O3_8h'].filter(x => x.Outcome === 'Deaths')
             var totalDeaths = 0
+
+            //this.no2 = false
+            //this.o3 = false
+            //why does this create an infinite loop?
+
+            if (no2Deaths[0].number_central) {
+                //console.log('no2 true')
+                this.no2 = true
+            }
+
+            if (o3Deaths[0].number_central) {
+                //console.log('o3 true')
+                this.o3 = true
+            }
 
             // Add up deaths and check for existence of other causes of death
             for (var death in pm25Deaths) {
