@@ -1,6 +1,19 @@
 <template>
     <div v-if="this.$parent.cityData">
-        <i18n path="pm25no2deaths" tag="h2" id="costtext" v-if="no2">
+        <i18n path="pm25no2o3deaths" tag="h2" id="costtext" v-if="no2 && o3">
+            <template #city>
+                <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
+            </template>
+            <template #costLine><br />
+                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }} {{ $t('life_cost')}}</span>
+                <span class="bg-transparent"> {{ $t('and') }} </span>
+                <span class="bg-warning font-weight-bold">US${{ totalCosts(cityData).toLocaleString() }}</span><br />
+            </template>
+            <template #showDate>
+                <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
+            </template>
+        </i18n>
+        <i18n path="pm25no2deaths" tag="h2" id="costtext" v-else-if="no2">
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
@@ -26,19 +39,7 @@
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
             </template>
         </i18n>
-        <i18n path="pm25no2o3deaths" tag="h2" id="costtext" v-else-if="no2 && o3">
-            <template #city>
-                <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
-            </template>
-            <template #costLine><br />
-                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }} {{ $t('life_cost')}}</span>
-                <span class="bg-transparent"> {{ $t('and') }} </span>
-                <span class="bg-warning font-weight-bold">US${{ totalCosts(cityData).toLocaleString() }}</span><br />
-            </template>
-            <template #showDate>
-                <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
-            </template>
-        </i18n>
+
         <i18n path="pm25deaths" tag="h2" id="costtext" v-else>
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
@@ -63,9 +64,6 @@
 </template>
 
 <script>
-/* eslint-disable */
-var no2
-var o3
 export default {
     name: 'ShowData',
     props: ['cityData'],
@@ -86,9 +84,15 @@ export default {
             if (no2Deaths[0].number_central) {
                 this.no2 = true
             }
+            else {
+                this.no2 = false
+            }
 
             if (o3Deaths[0].number_central) {
                 this.o3 = true
+            }
+            else {
+                this.o3 = false
             }
 
             // Add up deaths and check for existence of other causes of death
