@@ -88,7 +88,7 @@ export default {
             for (var death in pm25Deaths) {
                 totalDeaths += pm25Deaths[death].number_central
             }
-            totalDeaths += (no2Deaths[0].number_central ? no2Deaths[0].number_central : 0) + (o3Deaths[0].number_central ? o3Deaths[0].number_central : 0)
+            totalDeaths += (this.no2 ? no2Deaths[0].number_central : 0) + (this.o3 ? o3Deaths[0].number_central : 0)
             
             return Math.round(totalDeaths)
         },
