@@ -81,19 +81,8 @@ export default {
             var o3Deaths = cityData.estimations.ytd['O3_8h'].filter(x => x.Outcome === 'Deaths')
             var totalDeaths = 0
 
-            if (no2Deaths[0].number_central) {
-                this.no2 = true
-            }
-            else {
-                this.no2 = false
-            }
-
-            if (o3Deaths[0].number_central) {
-                this.o3 = true
-            }
-            else {
-                this.o3 = false
-            }
+            no2Deaths[0].number_central ? this.no2 = true : this.no2 = false
+            o3Deaths[0].number_central ? this.o3 = true : this.o3 = false
 
             // Add up deaths and check for existence of other causes of death
             for (var death in pm25Deaths) {
