@@ -25,8 +25,8 @@ export default {
     },
     methods: {
         getData: function(value) {
-            const url = 'https://y2mta1n6vj.execute-api.us-east-1.amazonaws.com/prod/pollutionCostCounter/' + value
-            //const url = 'https://website-api.airvisual.com/v1/analytics/counter/' + value
+            //const url = 'https://y2mta1n6vj.execute-api.us-east-1.amazonaws.com/prod/pollutionCostCounter/' + value
+            const url = 'https://website-api.airvisual.com/v1/analytics/counter/' + value
             this.axios
                 .get(url)
                 .then(response => (this.cityData = response.data));
