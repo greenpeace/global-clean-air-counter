@@ -39,7 +39,6 @@
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
             </template>
         </i18n>
-
         <i18n path="pm25deaths" tag="h2" id="costtext" v-else>
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
