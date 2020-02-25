@@ -55,7 +55,7 @@
         </i18n>
         <i18n path="methodology" tag="span" id="methodology">
             <template #addLink>
-                <a href="http://www.lauri.com/" target="_blank" id="methodlink">{{here}}</a>
+                <a href="http://www.lauri.com/" target="_blank" id="methodlink">{{ $t('here')}}</a>
             </template>
         </i18n>
         <hr />
