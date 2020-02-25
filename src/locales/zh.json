@@ -31,7 +31,6 @@
   },
   "lead_text": "空氣汙染對您的城市造成多少損失?",
   "select_your_city": "請選擇你的城市",
-  "deaths": "在{city}PM2.5空氣汙染自從{showDate}造成大約{costLine}",
   "pm25deaths": "自{showDate}以來，在{city}，PM2.5造成的空氣污染估計造成{costLine}美元的損失*。",
   "pm25o3deaths": "自{showDate}以來，在{city}，PM2.5和臭氧造成的空氣污染估計造成{costLine}美元的損失*。",
   "pm25no2deaths": "自{showDate}以來，在{city}，PM2.5和NO2造成的空氣污染估計造成{costLine}美元的損失*。",
