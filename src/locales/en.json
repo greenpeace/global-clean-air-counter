@@ -1,7 +1,7 @@
 {
   "lead_text": "How much is air pollution costing your city?",
   "select_your_city": "Please select your city",
-  "pm25deaths":    "In {city} air pollution from PM2.5 has cost an estimated {costLine} since {showDate}.",
+  "pm25deaths": "In {city} air pollution from PM2.5 has cost an estimated {costLine} since {showDate}.",
   "pm25no2deaths": "In {city} air pollution from PM2.5 and NO2 has cost an estimated {costLine} since {showDate}.",
   "pm25o3deaths": "In {city} air pollution from PM2.5 and ozone has cost an estimated {costLine} since {showDate}.",
   "pm25no2o3deaths": "In {city} air pollution from PM2.5, NO2 and ozone has cost an estimated {costLine} since {showDate}.",
