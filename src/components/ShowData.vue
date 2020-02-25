@@ -52,7 +52,7 @@
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
             </template>
         </i18n>
-        <i18n path="methodology" tag="span" id="methodology">
+        <i18n path="methodology" tag="h4" id="methodology">
             <template #addLink>
                 <a href="http://www.lauri.com/" target="_blank" id="methodlink">{{ $t('here') }}</a>
             </template>
