@@ -1,10 +1,10 @@
 {
     "cities": {
-      "2rwQKsaAs2MnT8bBQ": "Seoul",
-      "6knMH3Y4XgY73QAeh": "Istanbul",
-      "7McFS9nFSf5TQmwva": "London",
+      "2rwQKsaAs2MnT8bBQ": "Seul",
+      "6knMH3Y4XgY73QAeh": "Istambul",
+      "7McFS9nFSf5TQmwva": "Londra",
       "HE9g3tCPyEaz6Jbxa": "Sydney",
-      "KxnLg5issKdfCRjDe": "São Paulo",
+      "KxnLg5issKdfCRjDe": "Sao Paulo",
       "LembLiKtxzRZbDYP4": "Jakarta",
       "QtdyzkPatgqoZoSv2": "Guangzhou",
       "R6kPWmwE4Nts3vq3k": "Shanghai",
@@ -20,7 +20,8 @@
       "5bac89ca24b967f0b5308109": "Johannesburg",
       "5b17393872ab10af9f02e0d7": "Mexico City",
       "5bac86de24b967f0b5307bc3": "New Delhi",
-      "DN4mWpnyhqqjZvDzS": "Moscova"
+      "DN4mWpnyhqqjZvDzS": "Moscova",
+      "5bac8adf24b967f0b5308292": "București"
     },
     "lead_text": "Cât costă poluarea aerului în orașul tău?",
     "select_your_city": "Vă rugăm să selectați orașul",
