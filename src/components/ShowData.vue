@@ -1,6 +1,6 @@
 <template>
     <div v-if="this.$parent.cityData">
-        <i18n path="pm25no2o3deaths" tag="h2" id="costtext" v-if="no2 && o3">
+        <i18n path="pm25no2o3deaths" tag="h2" id="costtext" class="mb-2" v-if="no2 && o3">
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
@@ -13,7 +13,7 @@
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
             </template>
         </i18n>
-        <i18n path="pm25no2deaths" tag="h2" id="costtext" v-else-if="no2">
+        <i18n path="pm25no2deaths" tag="h2" id="costtext" class="mb-2" v-else-if="no2">
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
@@ -26,7 +26,7 @@
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
             </template>
         </i18n>
-        <i18n path="pm25o3deaths" tag="h2" id="costtext" v-else-if="o3">
+        <i18n path="pm25o3deaths" tag="h2" id="costtext" class="mb-2" v-else-if="o3">
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
@@ -39,7 +39,7 @@
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
             </template>
         </i18n>
-        <i18n path="pm25deaths" tag="h2" id="costtext" v-else>
+        <i18n path="pm25deaths" tag="h2" id="costtext" class="mb-2" v-else>
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
@@ -58,7 +58,7 @@
             </template>
         </i18n>
         <hr />
-        <div>
+        <div class="mb-2">
             <strong>{{ $t('share') }}</strong><br />
             <a class="btn btn-warning m-1" id="twittersharebutton" href="" target="_blank" role="button">{{ $t('twitter') }}</a>
             <a class="btn btn-warning m-1" id="facebooksharebutton" href="" target="_blank" role="button">{{ $t('facebook') }}</a>
