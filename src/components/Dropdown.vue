@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 import cities from './cities.json';
 
 export default {
@@ -29,9 +30,29 @@ export default {
         sortCities: function () {
             const loadedCities = cities[this.cityList];
             var sortedCities = [];
-            for (var city in loadedCities) {
-                sortedCities.push({id: loadedCities[city], name: this.$t('cities.' + loadedCities[city])})
-                sortedCities.sort((a, b) => (a.name > b.name) ? 1 : -1);               
+
+            // Sort national cities to top if list contains global cities
+            if (loadedCities.indexOf('xxxxxxxxxxxxxxxxx') > 0) {
+                var topCities = loadedCities.slice(0, loadedCities.indexOf('xxxxxxxxxxxxxxxxx'))
+                var bottomCities = loadedCities.slice(loadedCities.indexOf('xxxxxxxxxxxxxxxxx')+1, loadedCities.length)
+                var sortedTopCities = []
+                var sortedBottomCities = []
+                for (var topCity in topCities) {
+                    sortedTopCities.push({id: topCities[topCity], name: this.$t('cities.' + topCities[topCity])})
+                    sortedTopCities.sort((a, b) => (a.name > b.name) ? 1 : -1); 
+                }
+                for (var bottomCity in bottomCities) {
+                    sortedBottomCities.push({id: bottomCities[bottomCity], name: this.$t('cities.' + bottomCities[bottomCity])})
+                    sortedBottomCities.sort((a, b) => (a.name > b.name) ? 1 : -1); 
+                }
+                sortedCities = sortedTopCities.concat(sortedBottomCities)
+            }
+            // Otherwise simple list sort
+            else {
+                for (var city in loadedCities) {
+                    sortedCities.push({id: loadedCities[city], name: this.$t('cities.' + loadedCities[city])})
+                    sortedCities.sort((a, b) => (a.name > b.name) ? 1 : -1);               
+                }
             }
             return sortedCities
         }
