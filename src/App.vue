@@ -1,7 +1,7 @@
 <template>
     <div id="cityinfo" class="jumbotron border bg-transparent" style="border-width: 5px !important; padding: 1rem !important; text-align: center;">
         <h2 class="mb-3">{{ $t('lead_text') }}</h2>
-        <Dropdown @update:option="getData" :cityList=this.cityList class="mb-2"></Dropdown>
+        <Dropdown @update:option="getData" :cityList=this.cityList class="mb-3"></Dropdown>
         <ShowData :cityData=cityData></ShowData>
         <i18n path="created" tag="p">
             <template #greenpeace>

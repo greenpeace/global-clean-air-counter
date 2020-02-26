@@ -60,8 +60,8 @@
         <hr />
         <div class="mb-2">
             <strong>{{ $t('share') }}</strong><br />
-            <a class="btn btn-warning m-1" id="twittersharebutton" href="" target="_blank" role="button">{{ $t('twitter') }}</a>
-            <a class="btn btn-warning m-1" id="facebooksharebutton" href="" target="_blank" role="button">{{ $t('facebook') }}</a>
+            <a class="btn btn-warning m-2" id="twittersharebutton" href="" target="_blank" role="button">{{ $t('twitter') }}</a>
+            <a class="btn btn-warning m-2" id="facebooksharebutton" href="" target="_blank" role="button">{{ $t('facebook') }}</a>
         </div>
     </div>
 </template>
