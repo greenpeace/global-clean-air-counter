@@ -54,7 +54,7 @@
         </i18n>
         <i18n path="methodology" tag="span" id="methodology" style="font-size: x-small; font-weight: 100;">
             <template #addLink>
-                <a href="http://www.lauri.com/" target="_blank" id="methodlink">{{ $t('here') }}</a>
+                <a href="https://energyandcleanair.org/revealing-the-cost-of-air-pollution-in-real-time/" target="_blank" id="methodlink">{{ $t('here') }}</a>
             </template>
         </i18n>
         <hr />
@@ -96,8 +96,24 @@ export default {
             return Math.round(totalDeaths)
         },
         totalCosts: function(cityData) {
-            var pm25Costs = cityData.estimations.ytd['PM2.5'].find(x => x.Outcome === 'Absences')
-            return Math.round(pm25Costs['cost.USD_central'])
+            var pm25costs = []
+            pm25costs.push((cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'YLLs')).filter(y => y.Cause.indexOf('LRI') >= 0))
+            pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Absences'))
+            pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'YLDs'))
+            pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'PTB'))
+            var no2Costs = cityData.estimations.ytd['NO2'].filter(x => x.Outcome === 'YLLs')
+            var o3Costs = cityData.estimations.ytd['O3_8h'].filter(x => x.Outcome === 'YLLs')
+            var totalCosts = 0
+            
+            //no2Costs[0].cost.USD_central ? this.no2 = true : this.no2 = false
+            //o3Costs[0].cost.USD_central ? this.o3 = true : this.o3 = false
+
+            for (var cost in pm25costs) {
+                totalCosts += pm25costs[cost].cost.USD_central
+            }
+            totalCosts += (no2Costs[0].cost.USD_central ? no2Costs[0].cost.USD_central : 0) + (o3Costs[0].cost.USD_central ? o3Costs[0].cost.USD_central : 0)
+
+            return Math.round(totalCosts)
         }
     },
     updated: function () {
