@@ -27,8 +27,6 @@
     "select_your_city": "Por favor, elige tu ciudad",
     "pm25deaths":    "En {city}, la contaminación del aire por PM2.5 ha costado aproximadamente {costLine} dólares desde el {showDate}*.",
     "pm25no2deaths": "En {city}, la contaminación del aire por PM2.5 y NO2 ha costado aproximadamente {costLine} dólares desde el {showDate}*.",
-    "pm25o3deaths":  "En {city}, la contaminación del aire por PM2.5 y ozono ha costado aproximadamente {costLine} dólares desde el {showDate}*.",
-    "pm25no2o3deaths": "En {city}, la contaminación del aire por PM2.5, NO2 y ozono ha costado aproximadamente {costLine} dólares desde el {showDate}*.",
     "methodology": "Basado en el impacto total estimado atribuible a PM2.5, NO2 y ozono durante los 365 días anteriores, distribuido día a día de acuerdo con los niveles de contaminantes registrados diariamente. La inclusión de NO2 y ozono depende de la disponibilidad de datos. Metodología {addLink}.",
     "here": "aquí",
     "life_cost": "vidas",

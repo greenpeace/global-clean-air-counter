@@ -26,8 +26,6 @@
     "select_your_city": "Silakan pilih kotamu",
     "pm25deaths": "Di {city}, polusi udara dari PM2.5 diperkirakan menghilangkan {costLine} sejak {showDate}.",
     "pm25no2deaths": "Di {city}, polusi udara dari PM2.5, dan NO2 diperkirakan menghilangkan {costLine} sejak {showDate}.",
-    "pm25o3deaths": "Di {city}, polusi udara dari PM2.5 dan ozon diperkirakan menghilangkan {costLine} sejak {showDate}.",
-    "pm25no2o3deaths": "Di {city}, polusi udara dari PM2.5, NO2 dan ozon diperkirakan menghilangkan {costLine} sejak {showDate}.",
     "methodology": "Berdasarkan perkiraan total dampak yang dikaitkan dengan PM2.5, NO2 dan ozon selama 365 hari sebelumnya, yang dibagi hari demi hari sesuai dengan tingkat pencemar harian yang dicatat. Pencantuman NO2 dan ozon tergantung pada ketersediaan data. Metodologi di {addLink}.",
     "life_cost": "nyawa",
     "and": "dan menelan biaya",
