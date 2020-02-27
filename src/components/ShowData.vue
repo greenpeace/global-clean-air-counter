@@ -116,9 +116,9 @@ export default {
             //o3Costs[0].cost.USD_central ? this.o3 = true : this.o3 = false
 
             for (var cost in pm25costs) {
-                totalCosts += pm25costs[cost].cost.USD_central
+                totalCosts += pm25costs[cost]['cost.USD_central']
             }
-            totalCosts += (no2Costs[0].cost.USD_central ? no2Costs[0].cost.USD_central : 0) + (o3Costs[0].cost.USD_central ? o3Costs[0].cost.USD_central : 0)
+            totalCosts += (no2Costs[0]['cost.USD_central'] ? no2Costs[0]['cost.USD_central'] : 0) + (o3Costs[0]['cost.USD_central'] ? o3Costs[0]['cost.USD_central'] : 0)
 
             return Math.round(totalCosts)
         }
