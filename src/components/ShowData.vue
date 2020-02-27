@@ -67,6 +67,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
     name: 'ShowData',
     props: ['cityData'],
@@ -104,6 +105,13 @@ export default {
             var no2Costs = cityData.estimations.ytd['NO2'].filter(x => x.Outcome === 'YLLs')
             var o3Costs = cityData.estimations.ytd['O3_8h'].filter(x => x.Outcome === 'YLLs')
             var totalCosts = 0
+
+            console.log('pm25costs: ')
+            console.log(pm25costs)
+            console.log('no2Costs: ')
+            console.log(no2Costs)
+            console.log('o3Costs: ')
+            console.log(o3Costs)
             
             //no2Costs[0].cost.USD_central ? this.no2 = true : this.no2 = false
             //o3Costs[0].cost.USD_central ? this.o3 = true : this.o3 = false
