@@ -97,8 +97,7 @@ export default {
             return Math.round(totalDeaths)
         },
         totalCosts: function(cityData) {
-            var pm25costs = []
-            pm25costs.push((cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'YLLs')).filter(y => y.Cause.indexOf('LRI') >= 0))
+            var pm25costs = (cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'YLLs')).filter(y => y.Cause.indexOf('LRI') >= 0)
             pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Absences'))
             pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'YLDs'))
             pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'PTB'))
