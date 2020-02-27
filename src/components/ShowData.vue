@@ -106,8 +106,8 @@ export default {
             var totalCosts = 0
             
             // Update flags if cost data overrides deaths, other keep same
-            no2Costs[0].cost.USD_central ? this.no2 = true : this.no2 = this.no2
-            o3Costs[0].cost.USD_central ? this.o3 = true : this.o3 = this.o3
+            no2Costs[0]['cost.USD_central'] ? this.no2 = true : this.no2 = this.no2
+            o3Costs[0]['cost.USD_central'] ? this.o3 = true : this.o3 = this.o3
 
             // Add up costs and check for existence of other costs
             for (var cost in pm25costs) {
