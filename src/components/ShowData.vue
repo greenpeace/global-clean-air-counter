@@ -89,7 +89,13 @@ export default {
     },
     updated: function () {
         var shareText = document.getElementById('costtext').textContent;
-        var shareHashtag = this.$t('hashtag');
+        var shareHashtag = ''
+        if (this.$t('hashtag') === 'CleanAirNow') {
+            shareHashtag = 'CleanAirNow'
+        }
+        else {
+            shareHashtag = this.$t('hashtag') + ',CleanAirNow'
+        }
         var twitterShare = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + window.location.href + '&hashtags=' + shareHashtag;
         var facebookShare = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.href;
         document.getElementById('twittersharebutton').href = twitterShare
