@@ -70,7 +70,6 @@ export default {
             // Get all data resulting in costs
             var pm25costs = (cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'YLLs')).filter(y => y.Cause.indexOf('LRI') >= 0)
             pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Absences')[0])
-            pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'YLDs')[0])
             pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'PTB')[0])
             var no2Costs = cityData.estimations.ytd['NO2'].filter(x => x.Outcome === 'YLLs')
             var totalCosts = 0
