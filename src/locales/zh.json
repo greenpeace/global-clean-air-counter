@@ -33,7 +33,7 @@
   "select_your_city": "請選擇你的城市",
   "pm25deaths": "自{showDate}以來，在{city}，PM2.5造成的空氣污染估計造成{costLine}美元的損失*。",
   "pm25no2deaths": "自{showDate}以來，在{city}，PM2.5和NO2造成的空氣污染估計造成{costLine}美元的損失*。",
-  "methodology": "基於過去365天可歸因於PM2.5、NO2和臭氧的估計總影響，並根據每日記錄的污染物濃度逐日分配。是否包含NO2和臭氧取決於數據的可用性。研究方法{addLink}。",
+  "methodology": "基於過去365天可歸因於PM2.5和NO2的估計總影響，並根據每日記錄的污染物濃度逐日分配。是否包含NO2取決於數據的可用性。研究方法 {addLink}。",
   "life_cost": "人的生命損失",
   "and": "和",
   "here": "在此",

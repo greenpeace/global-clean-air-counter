@@ -4,7 +4,7 @@
     "deaths": "{city}'da PM2.5 kirliliği, {showDate} tarihinden itibaren tahmini olarak {costLine} mal olmuştur.",
     "pm25deaths":    "{city}'de PM2.5 kaynaklı hava kirliliği, {showDate} tarihinden itibaren tahmini {costLine} ABD dolarına mal olmuştur.",
     "pm25no2deaths": "{city}'de PM2.5 ve NO2 kaynaklanan hava kirliliği, {showDate} tarihinden itibaren tahmini {costLine} ABD dolarına mal olmuştur.",
-    "methodology": "Önceki 365 gün boyunca PM2.5, NO2 ve ozon ile ilişkilendirilebilen tahmini toplam etkiye dayanarak, günlük kaydedilen kirletici seviyelerine göre gün be gün dağıtılmaktadır. NO2 ve ozonun dahil edilmesi veri mevcudiyetine bağlıdır. {addLink} metodoloji.",
+    "methodology": "Önceki 365 gün boyunca PM2.5 ve NO2 ile ilişkilendirilebilen tahmini toplam etkiye dayanarak, günlük kaydedilen kirletici seviyelerine göre gün be gün dağıtılmaktadır. NO2 dahil edilmesi veri mevcudiyetine bağlıdır. {addLink} metodoloji.",
     "life_cost": "cana",
     "and": "ve",
     "here": "Burada",
