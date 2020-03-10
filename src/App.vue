@@ -8,7 +8,7 @@
                 <a href="https://www.greenpeace.org/southeastasia/" target="_blank">{{ $t('greenpeace') }}</a>
             </template>
             <template #airvisual>
-                <a href="https://www.airvisual.com/" target="_blank">Air Visual</a>
+                <a href="https://www.iqair.com/air-pollution-data-api/" target="_blank">{{ $t('airvisual') }}</a>
             </template>
         </i18n>
     </div>
