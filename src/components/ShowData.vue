@@ -87,7 +87,7 @@ export default {
         }
     },
     updated: function () {
-        if (this.$parent.cityData) {
+        if (document.getElementById('costtext').textContent) {
             var shareText = document.getElementById('costtext').textContent;
             var shareHashtag = ''
             if (this.$t('hashtag') === 'CleanAirNow') {
