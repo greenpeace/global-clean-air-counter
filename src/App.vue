@@ -34,7 +34,6 @@ export default {
             this.axios
                 .get(url)
                 .then(response => (this.cityData = response.data))
-                .then(this.loadingState = false);
         }
     },
     data: function() {
@@ -46,6 +45,11 @@ export default {
     },
     mounted: function () {
       this.$i18n.locale = this.$attrs.lang
+    },
+    updated: function () {
+        if (this.cityData) {
+            this.loadingState = false
+        }
     }
 }
 </script>
