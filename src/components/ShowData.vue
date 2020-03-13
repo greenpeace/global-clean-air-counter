@@ -41,6 +41,7 @@
 </template>
 
 <script>
+/*eslint-disable*/
 export default {
     name: 'ShowData',
     props: ['cityData'],
@@ -87,7 +88,8 @@ export default {
         }
     },
     updated: function () {
-        if (document.getElementById('costtext').textContent) {
+        if (this.$parent.cityData !== null) {
+            console.log ("textcontent: " + document.getElementById('costtext').textContent)
             var shareText = document.getElementById('costtext').textContent;
             var shareHashtag = ''
             if (this.$t('hashtag') === 'CleanAirNow') {
