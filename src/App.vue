@@ -54,3 +54,16 @@ export default {
     }
 }
 </script>
+
+<style>
+.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    border-radius: 0.25rem;
+}
+
+.btn-warning:hover {
+    color: #212529 !important;
+}
+</style>
