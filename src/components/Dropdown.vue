@@ -1,5 +1,5 @@
 <template>
-    <select style="width: 100%" v-model="selected" name="dropdown" id="dropdown" @change="optionChanged" class="custom-select">
+    <select style="width: 100%" v-model="selected" name="dropdown" id="dropdown" @change="optionChanged" class="form-control custom-select">
         <option disabled value="select_your_city">
             {{ $t('select_your_city') }}
         </option>
