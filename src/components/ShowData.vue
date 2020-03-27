@@ -34,8 +34,8 @@
         <hr />
         <div class="mb-2">
             <strong>{{ $t('share') }}</strong><br />
-            <a class="btn btn-warning m-2" id="twittersharebutton" href="" target="_blank" role="button">{{ $t('twitter') }}</a>
-            <a class="btn btn-warning m-2" id="facebooksharebutton" href="" target="_blank" role="button">{{ $t('facebook') }}</a>
+            <a class="btn btn-warning m-2" id="twittersharebutton" style="color:#212529;background-color:#ffc107;border-color:#ffc107;border-radius:0.25rem;" onMouseOver="this.style.color='#212529 !important;'" onMouseOut="this.style.color='color:#212529;'" href="" target="_blank" role="button">{{ $t('twitter') }}</a>
+            <a class="btn btn-warning m-2" id="facebooksharebutton" style="color:#212529;background-color:#ffc107;border-color:#ffc107;border-radius:0.25rem;" onMouseOver="this.style.color='#212529 !important;'" onMouseOut="this.style.color='color:#212529;'" href="" target="_blank" role="button">{{ $t('facebook') }}</a>
         </div>
     </div>
 </template>
