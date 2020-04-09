@@ -28,7 +28,7 @@
         </i18n>
         <i18n path="methodology" tag="span" id="methodology" style="font-size: x-small; font-weight: 100;">
             <template #addLink>
-                <a v-if="this.$parent.$attrs.lang='th'" href="https://act.gp/3c4vK0p" target="_blank" id="methodlink">{{ $t('here') }}</a>
+                <a v-if="this.$i18n.locale='th'" href="https://act.gp/3c4vK0p" target="_blank" id="methodlink">{{ $t('here') }}</a>
                 <a v-else href="https://energyandcleanair.org/revealing-the-cost-of-air-pollution-in-real-time/" target="_blank" id="methodlink">{{ $t('here') }}</a>
             </template>
         </i18n>
