@@ -4,10 +4,8 @@
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
-            <template #costLine><br />
-                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }} {{ $t('life_cost')}}</span>
-                <span class="bg-transparent"> {{ $t('and') }} </span>
-                <span class="bg-warning font-weight-bold">US${{ totalCosts(cityData).toLocaleString() }}</span><br />
+            <template #lostLives>
+                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }}</span>
             </template>
             <template #showDate>
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
@@ -17,13 +15,16 @@
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
-            <template #costLine><br />
-                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }} {{ $t('life_cost')}}</span>
-                <span class="bg-transparent"> {{ $t('and') }} </span>
-                <span class="bg-warning font-weight-bold">US${{ totalCosts(cityData).toLocaleString() }}</span><br />
+            <template #lostLives>
+                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }}</span>
             </template>
             <template #showDate>
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
+            </template>
+        </i18n>
+        <i18n path="costs" tag="h3" id="costtext" class="mb-2">
+            <template #cost>
+                <strong class="bg-warning">{{ totalCosts(cityData).toLocaleString() }}</strong>
             </template>
         </i18n>
         <i18n v-if="this.$i18n.locale=='th'" path="methodology" tag="span" id="methodology" style="font-size: x-small; font-weight: 100;">
