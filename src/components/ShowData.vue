@@ -24,7 +24,7 @@
         </i18n>
         <i18n path="costs" tag="h3" id="costtext" class="mb-2">
             <template #cost>
-                <strong class="bg-warning">{{ totalCosts(cityData).toLocaleString() }}</strong>
+                <strong class="bg-warning">US${{ totalCosts(cityData).toLocaleString() }}</strong>
             </template>
         </i18n>
         <i18n v-if="this.$i18n.locale=='th'" path="methodology" tag="span" id="methodology" style="font-size: x-small; font-weight: 100;">
