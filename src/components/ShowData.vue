@@ -70,7 +70,7 @@ export default {
             }
             totalDeaths += (this.no2 ? no2Deaths[0].number_central : 0)
             
-            return Math.round(totalDeaths)
+            return parseFloat(totalDeaths.toPrecision(2))
         },
         totalCosts: function(cityData) {
             // Get all data resulting in costs
@@ -89,7 +89,7 @@ export default {
             }
             totalCosts += (no2Costs[0]['cost.USD_central'] ? no2Costs[0]['cost.USD_central'] : 0)
 
-            return Math.round(totalCosts)
+            return parseFloat(totalCosts.toPrecision(2))
         }
     },
     updated: function () {
