@@ -1,12 +1,10 @@
 {
     "lead_text": "כמה זיהום האוויר עולה לעיר שלך?",
     "select_your_city": "אנא בחר/י את עיר מגוריך",
-    "deaths": "ב {city} PM2.5 זיהום אוויר עלה {costLine} מוערך מאז {showDate}.",
-    "pm25deaths": "בעיר {city}, זיהום האוויר PM2.5 אחראי ל-{costLine} מ{showDate}.",
-    "pm25no2deaths": "בעיר {city}, זיהום האוויר מ-PM2.5 וNO2 אחראי ל-{costLine} מ {showDate}.",
-    "methodology": "בהתבסס על הערכת ההשפעה הכוללת המיוחסת ל-  NO2 וPM2.5 במהלך 365 הימים שקדמו לו, חולקו יום אחר יום על פי רמות המזהמים היומיים שנרשמו. הכללת NO2 תלויה בזמינות הנתונים. מתודולוגיה {addLink}.",  
-    "life_cost": "מקרי מוות",
-    "and": "ו-",
+    "pm25deaths": "בעיר {city} רמת זיהום האוויר מחלקיקי PM2.5 אחראית לאבדן של כ-{lostLives} בני אדם מאז {showDate}",
+    "pm25no2deaths": "בעיר {city} רמת זיהום האוויר מחלקיקי PM2.5 ו-NO2 אחראית לאבדן של כ-{lostLives} מאז {showDate}",
+    "costs": "זיהום אוויר עולה לכלכלת העיר כ-{cost} עד השנה.",
+    "methodology": "בהתבסס על הערכת ההשפעה הכוללת המיוחסת ל-  NO2 וPM2.5 במהלך 365 הימים שקדמו לו, חולקו יום אחר יום על פי רמות המזהמים היומיים שנרשמו. הכללת NO2 תלויה בזמינות הנתונים. מתודולוגיה {addLink}.",
     "here": "כאן",
     "hashtag": "CleanAirNow",
     "share": "שתפו והפיצו  את המידע",
@@ -87,7 +85,9 @@
       "hxL7oShLseB9sgjpZ": "היידרבד",
       "5zzMK2zfcfbyumREA": "פאטנה",
       "NAWD4zgao7hzk4ZiH": "ברצלונה",
-      "igp7hSLYmouA2JFhu": "מדריד"
+      "igp7hSLYmouA2JFhu": "מדריד",
+      "ChPMZH6KoB7GBnHAx": "ריאד",
+      "4eBXucEzuoz89W6JM": "ניירובי"
     }
   }
   
