@@ -26,7 +26,7 @@
     "select_your_city": "Silakan pilih kotamu",
     "pm25deaths": "Di {city} polusi udara dari PM 2.5 meningkatkan risiko kematian dini {lostLives} jiwa, sejak {showDate}",
     "pm25no2deaths": "Di {city} polusi udara dari PM 2.5 dan NO2 meningkatkan risiko kematian dini {lostLives} jiwa, sejak {showDate}",
-    "costs": "Polusi udara mengakibatkan kerugian ekonomi sebesar {cost} di tahun ini ",
+    "costs": "Polusi udara mengakibatkan kerugian ekonomi sebesar {cost} hingga hari ini",
     "methodology": "Berdasarkan perkiraan total dampak yang dikaitkan dengan PM2.5 dan NO2 selama 365 hari sebelumnya, yang dibagi hari demi hari sesuai dengan tingkat pencemar harian yang dicatat. Pencantuman NO2 tergantung pada ketersediaan data. Metodologi di {addLink}.",
     "here": "sini",
     "hashtag": "CleanAirNow",
