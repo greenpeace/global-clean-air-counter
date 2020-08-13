@@ -32,7 +32,7 @@
   "select_your_city": "請選擇您的城市",
   "pm25deaths": "在{city}，自{showDate}起，因PM2.5空氣污染而早死的人口估計有{lostLives}。",
   "pm25no2deaths": "在{city}，自{showDate}起，因PM2.5和二氧化氮空氣污染而早死的人口估計有{lostLives}。",
-  "costs": "今年，因為空氣污染而造成的經濟損失估計牽{cost}。",
+  "costs": "今年，因為空氣污染而造成的經濟損失估計約{cost}。",
   "methodology": "根據過去365天可歸因於PM2.5和NO2的估計總影響，分配每日測得之污染濃度帶來的影響。是否考量NO2濃度取決於數據的可用性。研究方法 {addLink}。",
   "here": "在此",
   "hashtag": "CleanAirNow",

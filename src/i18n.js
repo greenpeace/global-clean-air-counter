@@ -20,7 +20,8 @@ const dateTimeFormats = {
   "ro": setDateTimeFormats,
   "th": setDateTimeFormats,
   "tr": setDateTimeFormats,
-  "zh": setDateTimeFormats,
+  "zh-hk": setDateTimeFormats,
+  "zh-tw": setDateTimeFormats,
 }
 
 function loadLocaleMessages () {
