@@ -8,7 +8,7 @@
                 <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }}</span>
             </template>
             <template #showDate>
-                <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
+                <span>{{ $d(new Date(2021, 0, 1), 'long') }}</span>
             </template>
         </i18n>
         <i18n path="pm25deaths" tag="h2" id="livestext" class="mb-2" v-else>
@@ -19,7 +19,7 @@
                 <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }}</span>
             </template>
             <template #showDate>
-                <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
+                <span>{{ $d(new Date(2021, 0, 1), 'long') }}</span>
             </template>
         </i18n>
         <i18n path="costs" tag="h3" id="costtext" class="mb-2">
