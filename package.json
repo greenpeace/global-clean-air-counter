@@ -9,32 +9,32 @@
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
-    "@bit/joshk.vue-spinners-css.ring-loader": "^1.1.3",
-    "bootstrap-vue": "^2.1.0",
-    "core-js": "^3.4.4",
-    "vue": "^2.6.10",
-    "vue-i18n": "^8.0.0"
+    "@bit/joshk.vue-spinners-css.ring-loader": "^1.1.5",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.8.3",
+    "vue": "^2.6.12",
+    "vue-i18n": "^8.22.4"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.7.0",
+    "@babel/polyfill": "^7.12.1",
     "@kazupon/vue-i18n-loader": "^0.3.0",
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
+    "@vue/cli-plugin-babel": "^4.5.11",
+    "@vue/cli-plugin-eslint": "^4.5.11",
+    "@vue/cli-service": "^4.5.11",
     "axios": "^0.21.1",
-    "babel-eslint": "^10.0.3",
-    "bootstrap": "^4.3.1",
+    "babel-eslint": "^10.1.0",
+    "bootstrap": "^4.6.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "mutationobserver-shim": "^0.3.3",
+    "mutationobserver-shim": "^0.3.7",
     "popper.js": "^1.16.0",
     "portal-vue": "^2.1.6",
-    "sass": "^1.19.0",
+    "sass": "^1.32.7",
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-axios": "0.0.4",
     "vue-cli-plugin-bootstrap-vue": "^0.6.0",
     "vue-cli-plugin-i18n": "^0.6.1",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
     "root": true,

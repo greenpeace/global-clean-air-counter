@@ -59,16 +59,20 @@ export default {
         totalDeaths: function(cityData) {
             // Get all data resulting in deaths
             var pm25Deaths = (cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Deaths')).filter(y => y.Cause.indexOf('LRI') >= 0)
-            var no2Deaths = cityData.estimations.ytd['NO2'].filter(x => x.Outcome === 'Deaths')
+            // Exclude NO2 data
+            // var no2Deaths = cityData.estimations.ytd['NO2'].filter(x => x.Outcome === 'Deaths')
             var totalDeaths = 0
 
-            no2Deaths[0].number_central ? this.no2 = true : this.no2 = false
+            // Exclude NO2 data
+            this.no2 = false
+            // no2Deaths[0].number_central ? this.no2 = true : this.no2 = false
 
             // Add up deaths and check for existence of other causes of death
             for (var death in pm25Deaths) {
                 totalDeaths += pm25Deaths[death].number_central
             }
-            totalDeaths += (this.no2 ? no2Deaths[0].number_central : 0)
+            // Exclude NO2 deaths
+            // totalDeaths += (this.no2 ? no2Deaths[0].number_central : 0)
             
             return parseFloat(totalDeaths.toPrecision(2))
         },
@@ -87,7 +91,9 @@ export default {
             for (var cost in pm25costs) {
                 totalCosts += pm25costs[cost]['cost.USD_central']
             }
-            totalCosts += (no2Costs[0]['cost.USD_central'] ? no2Costs[0]['cost.USD_central'] : 0)
+
+            // Exclude NO2 costs
+            // totalCosts += (no2Costs[0]['cost.USD_central'] ? no2Costs[0]['cost.USD_central'] : 0)
 
             return parseFloat(totalCosts.toPrecision(2))
         }
