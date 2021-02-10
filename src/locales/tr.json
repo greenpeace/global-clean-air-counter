@@ -4,7 +4,7 @@
     "pm25deaths":    "PM 2.5 kaynaklı hava kirliliği {city} genelinde {showDate} tarihinden beri tahmini olarak {lostLives} can kaybına neden oldu.",
     "pm25no2deaths": "PM 2.5 ve NO2 kaynaklı hava kirliliği {city} genelinde {showDate} tarihinden beri tahmini olarak {lostLives} can kaybına neden oldu.",
     "costs": "Hava kirliliğinin bugüne kadar şehrin ekonomisine maliyeti yaklaşık {cost} oldu.",
-    "methodology": "Önceki 365 gün boyunca PM2.5 ile ilişkilendirilebilen tahmini toplam etkiye dayanarak, günlük kaydedilen kirletici seviyelerine göre gün be gün dağıtılmaktadır. Burada metodoloji.",
+    "methodology": "Önceki 365 gün boyunca PM2.5 ile ilişkilendirilebilen tahmini toplam etkiye dayanarak, günlük kaydedilen kirletici seviyelerine göre gün be gün dağıtılmaktadır. {addLink} metodoloji.",
     "here": "Burada",
     "hashtag": "TemizHavaŞimdi",
     "share": "Bu bilgileri paylaşın",
