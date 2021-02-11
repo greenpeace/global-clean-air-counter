@@ -1,17 +1,6 @@
 <template>
     <div v-if="this.$parent.cityData">
-        <i18n path="pm25no2deaths" tag="h2" id="livestext" class="mb-2" v-if="no2">
-            <template #city>
-                <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
-            </template>
-            <template #lostLives>
-                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }}</span>
-            </template>
-            <template #showDate>
-                <span>{{ $d(new Date(2021, 0, 1), 'long') }}</span>
-            </template>
-        </i18n>
-        <i18n path="pm25deaths" tag="h2" id="livestext" class="mb-2" v-else>
+        <i18n path="pm25deaths" tag="h2" id="livestext" class="mb-2">
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
