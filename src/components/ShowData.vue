@@ -1,11 +1,15 @@
 <template>
     <div v-if="this.$parent.cityData">
         <i18n path="pm25deaths" tag="h2" id="livestext" class="mb-2">
+
+            <template #dev>
+                <small>.</small>
+            </template>
             <template #city>
-                <strong class="bg-warning">{{ $t('cities.' + this.$parent.cityData.cityID) }}</strong>
+                <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
             <template #lostLives>
-                <span class="bg-warning font-weight-bold">{{ totalDeaths(this.$parent.cityData).toLocaleString() }}</span>
+                <span class="bg-warning font-weight-bold">{{ totalDeaths(cityData).toLocaleString() }}</span>
             </template>
             <template #showDate>
                 <span>{{ $d(new Date(2021, 0, 1), 'long') }}</span>
@@ -92,6 +96,7 @@ export default {
     updated: function () {
         if (this.$parent.cityData !== null) {
             var shareText = document.getElementById('livestext').textContent;
+            console.log("started, ", this.$parent.cityData)
             var shareHashtag = ''
             if (this.$t('hashtag') === 'CleanAirNow') {
                 shareHashtag = 'CleanAirNow'

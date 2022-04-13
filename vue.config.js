@@ -21,11 +21,11 @@ module.exports = {
       localeDir: 'locales',
       enableInSFC: true
     }
+  },
+  devServer: {
+    disableHostCheck: true,    
+    https: true,
+    port: 80,
+    host: "greenpeace.org"
   }
-  // devServer: {
-  //   disableHostCheck: true,    
-  //   https: true,
-  //   port: 80,
-  //   host: "greenpeace.org"
-  // }
 }
