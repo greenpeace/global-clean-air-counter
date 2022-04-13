@@ -1,10 +1,6 @@
 <template>
     <div v-if="this.$parent.cityData">
         <i18n path="pm25deaths" tag="h2" id="livestext" class="mb-2">
-
-            <template #dev>
-                <small>.</small>
-            </template>
             <template #city>
                 <strong class="bg-warning">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
@@ -50,7 +46,6 @@ export default {
     },
     methods: {
         totalDeaths: function(cityData) {
-            console.log("totalDeaths", cityData)
             // Get all data resulting in deaths
             var pm25Deaths = (cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Deaths')).filter(y => y.Cause.indexOf('LRI') >= 0)
             // Exclude NO2 data
@@ -71,7 +66,6 @@ export default {
             return parseFloat(totalDeaths.toPrecision(2))
         },
         totalCosts: function(cityData) {
-            // console.log("totalCosts", cityData)
             // Get all data resulting in costs
             var pm25costs = (cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'YLLs')).filter(y => y.Cause.indexOf('LRI') >= 0)
             pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Absences')[0])
@@ -96,7 +90,6 @@ export default {
     updated: function () {
         if (this.$parent.cityData !== null) {
             var shareText = document.getElementById('livestext').textContent;
-            console.log("started, ", this.$parent.cityData)
             var shareHashtag = ''
             if (this.$t('hashtag') === 'CleanAirNow') {
                 shareHashtag = 'CleanAirNow'
