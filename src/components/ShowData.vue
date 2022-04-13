@@ -46,7 +46,7 @@ export default {
     },
     methods: {
         totalDeaths: function(cityData) {
-            // console.log(cityData)
+            console.log("totalDeaths", cityData)
             // Get all data resulting in deaths
             var pm25Deaths = (cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Deaths')).filter(y => y.Cause.indexOf('LRI') >= 0)
             // Exclude NO2 data
@@ -67,6 +67,7 @@ export default {
             return parseFloat(totalDeaths.toPrecision(2))
         },
         totalCosts: function(cityData) {
+            console.log("totalCosts", cityData)
             // Get all data resulting in costs
             var pm25costs = (cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'YLLs')).filter(y => y.Cause.indexOf('LRI') >= 0)
             pm25costs.push(cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Absences')[0])
@@ -89,7 +90,6 @@ export default {
         }
     },
     updated: function () {
-        console.log("started");
         if (this.$parent.cityData !== null) {
             var shareText = document.getElementById('livestext').textContent;
             var shareHashtag = ''
