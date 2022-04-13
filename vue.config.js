@@ -8,7 +8,6 @@ module.exports = {
       config.optimization = {
         splitChunks: false
       }
-    } else {
     }
   },
   filenameHashing: false,
