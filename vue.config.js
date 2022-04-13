@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 module.exports = {
   publicPath: '',
   configureWebpack: config => {
@@ -20,4 +22,10 @@ module.exports = {
       enableInSFC: true
     }
   }
+  // devServer: {
+  //   disableHostCheck: true,    
+  //   https: true,
+  //   port: 80,
+  //   host: "greenpeace.org"
+  // }
 }
