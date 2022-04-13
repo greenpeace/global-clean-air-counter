@@ -46,7 +46,6 @@ export default {
     },
     methods: {
         totalDeaths: function(cityData) {
-            console.log(cityData)
             // Get all data resulting in deaths
             var pm25Deaths = (cityData.estimations.ytd['PM2.5'].filter(x => x.Outcome === 'Deaths')).filter(y => y.Cause.indexOf('LRI') >= 0)
             // Exclude NO2 data
