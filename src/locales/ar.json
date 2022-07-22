@@ -48,6 +48,7 @@
     "f_share_url": "https://www.facebook.com/",
     "t_share_url": "https://twitter.com/",
     "twitter": "تويتر",
-    "facebook": "فيسبوك"
+    "facebook": "فيسبوك",
+    "generic_request_error": "لا يمكن معالجة الطلب. حاول مرة اخرى."
   }
   

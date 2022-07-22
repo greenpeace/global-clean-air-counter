@@ -41,6 +41,7 @@
     "f_share_url": "https://www.facebook.com/",
     "t_share_url": "https://twitter.com/",
     "twitter": "Twitter",
-    "facebook": "Facebook"
+    "facebook": "Facebook",
+    "generic_request_error": "Solicitarea nu a putut fi procesată. Vă rugăm să încercați din nou."
   }
   

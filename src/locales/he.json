@@ -15,6 +15,7 @@
     "t_share_url": "https://twitter.com/",
     "twitter": "טוויטר",
     "facebook": "פייסבוק",
+    "generic_request_error": "לא ניתן היה לטפל בבקשה. בבקשה נסה שוב.",
     "cities": {
       "2rwQKsaAs2MnT8bBQ": "סיאול",
       "6knMH3Y4XgY73QAeh": "איסטנבול",

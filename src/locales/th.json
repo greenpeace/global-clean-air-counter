@@ -17,6 +17,7 @@
     "t_share_url": "https://twitter.com/",
     "twitter": "Twitter",
     "facebook": "Facebook",
+    "generic_request_error": "ไม่สามารถดำเนินการตามคำขอได้ กรุณาลองอีกครั้ง.",
     "cities": {
       "2rwQKsaAs2MnT8bBQ": "โซล",
       "6knMH3Y4XgY73QAeh": "อิสตันบูล",

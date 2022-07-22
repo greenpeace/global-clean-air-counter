@@ -2,8 +2,9 @@
     <div id="cityinfo" class="jumbotron border bg-transparent" style="border-width: 5px !important; padding: 1rem !important; text-align: center;">
         <h2 class="mb-3">{{ $t('lead_text') }}</h2>
         <Dropdown @update:option="getData" :cityList=this.cityList class="mb-4"></Dropdown>
-        <RingLoader :size="45" :color="'#66cc00'" :loading=loadingState />
-        <ShowData :cityData=cityData></ShowData>
+        <RingLoader :size="45" :color="'#66cc00'" :loading="statusRequest === 'fetching'" />
+        <GenericRequestError v-if="statusRequest === 'error'" />
+        <ShowData v-if="statusRequest === 'success'" :cityData=cityData></ShowData>
         <i18n path="created" tag="p">
             <template #greenpeace>
                 <a href="https://www.greenpeace.org/southeastasia/" target="_blank">{{ $t('greenpeace') }}</a>
@@ -18,29 +19,40 @@
 <script>
 import Dropdown from './components/Dropdown.vue'
 import ShowData from './components/ShowData.vue'
+import GenericRequestError from './components/GenericRequestError.vue'
+
 import RingLoader from '@bit/joshk.vue-spinners-css.ring-loader'
 export default {
     name: 'counter',
     components: {
         Dropdown,
         ShowData,
+        GenericRequestError,
         RingLoader
     },
     methods: {
         getData: function(value) {
             const url = 'https://website-api.airvisual.com/v1/analytics/counter/' + value
             this.cityData = null
-            this.loadingState = true
+            this.statusRequest = 'fetching'
             this.axios
                 .get(url)
-                .then(response => (this.cityData = response.data))
+                .then((response) => {
+                    this.cityData = response.data
+                    this.statusRequest = 'success'
+                })
+                .catch(() => {
+                    this.statusRequest = 'error'
+                    this.cityData = null
+                })
+
         }
     },
     data: function() {
         return {
             cityData: null,
             cityList: this.$attrs.citylist,
-            loadingState: false
+            statusRequest: 'idle'
         }
     },
     mounted: function () {
@@ -48,7 +60,7 @@ export default {
     },
     updated: function () {
         if (this.cityData) {
-            this.loadingState = false
+            this.statusRequest = 'idle'
         }
     }
 }
