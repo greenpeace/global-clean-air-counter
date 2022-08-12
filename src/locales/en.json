@@ -15,6 +15,7 @@
   "t_share_url": "https://twitter.com/",
   "twitter": "Twitter",
   "facebook": "Facebook",
+  "generic_request_error": "The request could not be processed. Please try again.",
   "cities": {
     "2rwQKsaAs2MnT8bBQ": "Seoul",
     "6knMH3Y4XgY73QAeh": "Istanbul",
